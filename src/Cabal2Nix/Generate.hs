@@ -12,8 +12,6 @@ import Control.Lens
 import Data.Maybe
 import qualified Data.Set as Set
 import Data.Version
-import Data.Monoid
-import Distribution.Nixpkgs.Util.PrettyPrinting
 import Distribution.Compiler
 import Distribution.Nixpkgs.Haskell
 import qualified Distribution.Nixpkgs.Haskell as Nix
@@ -25,9 +23,7 @@ import Distribution.Version
 import Distribution.PackageDescription
 import qualified Distribution.PackageDescription as Cabal
 import Distribution.PackageDescription.Configuration
-import Distribution.PackageDescription.Parse
 import Distribution.System
-import Distribution.Verbosity
 
 cabal2nix :: FlagAssignment -> GenericPackageDescription -> Derivation
 cabal2nix flags' cabal = normalize $ drv & cabalFlags .~ flags

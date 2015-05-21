@@ -6,12 +6,10 @@ module Distribution.Nixpkgs.Haskell where
 
 import Control.DeepSeq.Generics
 import Control.Lens
--- import Data.Char
 import Data.Set ( Set )
 import qualified Data.Set as Set
 import Data.Function
 import Data.List
-import Data.Monoid ( Monoid(..) )
 import Distribution.Version
 import Distribution.Nixpkgs.Meta
 import Distribution.Nixpkgs.Fetch
