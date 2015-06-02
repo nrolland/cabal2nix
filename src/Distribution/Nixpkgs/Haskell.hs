@@ -82,7 +82,6 @@ instance Pretty Derivation where
     , nest 2 $ vcat
       [ attr "pname"   $ doubleQuotes $ disp (packageName _pkgid)
       , attr "version" $ doubleQuotes $ disp (packageVersion _pkgid)
-      , onlyIf (_revision > 0) $ attr "revision" $ doubleQuotes (int _revision)
       , sourceAttr _src
       , onlyIf (_revision > 0) $ attr "revision" $ doubleQuotes $ int _revision
       , onlyIf (not (null _editedCabalFile)) $ attr "editedCabalFile" $ string _editedCabalFile
