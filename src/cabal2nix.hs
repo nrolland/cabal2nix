@@ -8,12 +8,10 @@ import Cabal2Nix.Package
 import Cabal2Nix.Version
 import Control.Exception ( bracket )
 import Control.Lens
-import Control.Monad ( when )
 import Data.Maybe ( fromMaybe )
 import qualified Data.Set as Set
 import Distribution.Nixpkgs.Fetch
 import Distribution.Nixpkgs.Haskell
-import Distribution.Nixpkgs.Haskell hiding ( version )
 import Distribution.Nixpkgs.Meta
 import Distribution.Nixpkgs.Util.PrettyPrinting hiding ( (<>) )
 import Distribution.PackageDescription ( FlagName(..), FlagAssignment )
